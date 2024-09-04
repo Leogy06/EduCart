@@ -2,7 +2,13 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        brightYellow: "#FFD700",
+        skyBlue: "#87CEEB",
+        coral: "#FF7F50",
+      },
+    },
   },
   plugins: [],
 };

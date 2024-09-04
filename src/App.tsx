@@ -1,14 +1,16 @@
 import Dashboard from "./pages/Dashboard";
-import SidePanel from "./components/layouts/SidePanel";
+import Container from "./components/layouts/Container";
+import { Route, Routes } from "react-router-dom";
+import Carts from "./pages/Carts";
 
 const App = () => {
   return (
-    <div>
-      <SidePanel />
-      <div className=" ms-24">
-        <Dashboard />
-      </div>
-    </div>
+    <Container>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/cart" element={<Carts />} />
+      </Routes>
+    </Container>
   );
 };
 
