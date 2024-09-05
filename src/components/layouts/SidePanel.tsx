@@ -3,6 +3,7 @@ import { BiCart } from "react-icons/bi";
 import { FaHome } from "react-icons/fa";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { PiPencilRulerDuotone } from "react-icons/pi";
 
 interface ListNavProps {
   text: string;
@@ -54,12 +55,12 @@ const SidePanel = () => {
   return (
     <div
       className={` flex h-full absolute left-0 top-0 bottom-0 bg-skyBlue shadow-lg transition-all duration-500 z-10 ${
-        isExpand ? "w-36" : "w-16"
+        isExpand ? "w-36" : "w-14"
       }`}
       onMouseEnter={() => setIsExpand(true)}
       onMouseLeave={() => setIsExpand(false)}
     >
-      <nav className="h-full pt-16">
+      <nav className="h-full">
         <ul>
           <BurgerButton handleIsExpand={handleIsExpand} />
           <ListNav
@@ -73,6 +74,12 @@ const SidePanel = () => {
             text="Cart"
             isExpand={isExpand}
             to="/cart"
+          />
+          <ListNav
+            icons={<PiPencilRulerDuotone size={24} />}
+            text="Items"
+            isExpand={isExpand}
+            to="/browse"
           />
         </ul>
       </nav>
