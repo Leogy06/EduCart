@@ -8,13 +8,11 @@ interface ContainerProps {
 
 const Container: React.FC<ContainerProps> = ({ children }) => {
   return (
-    <div className="flex h-screen w-screen bg-sky-50">
-      <SidePanel />
-      <div className=" ms-4 md:ms-20 me-4 flex-grow overflow-hidden">
+    <div className="flex h-screen w-screen bg-sky-50 border-2 border-blue-500">
+      <div className=" flex flex-col flex-grow ms-4 md:ms-20 me-4 overflow-hidden">
+        <SidePanel />
         <Header />
-        <div className="relative h-full overflow-y-auto py-4 pe-2">
-          {children}
-        </div>
+        <div className=" relative h-full overflow-y-auto">{children}</div>
       </div>
     </div>
   );

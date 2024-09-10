@@ -1,0 +1,57 @@
+/* From Uiverse.io by andrew-demchenk0 */
+.button-add-item {
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.button-add-item,
+.button-add-item__icon,
+.button-add-item__text {
+  transition: all 0.3s;
+}
+
+.button-add-item .button-add-item__text {
+  transform: translateX(30px);
+  color: #fff;
+  font-weight: 600;
+}
+
+.button-add-item .button-add-item__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-add-item .svg-btn {
+  width: 30px;
+  stroke: #fff;
+}
+
+.button-add-item:hover {
+  background: #ff7f50;
+}
+
+.button-add-item:hover .button-add-item__text {
+  color: transparent;
+}
+
+.button-add-item:hover .button-add-item__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.button-add-item:active .button-add-item__icon {
+  background-color: #f5784a;
+}
+
+.button-add-item:active {
+  border: 1px solid #f3784b;
+}

@@ -1,7 +1,7 @@
-import React from "react";
+import ItemSkeletonLoader from "../layouts/ItemSkeletonLoader";
 
 const Carts = () => {
-  return <div>Carts</div>;
+  return <>Carts</>;
 };
 
 export default Carts;
