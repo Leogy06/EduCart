@@ -17,8 +17,8 @@ const ListNav: React.FC<ListNavProps> = ({ icons, text, isExpand, to }) => {
   const isPageActive = useMatch({ path: resolvedPath.pathname, end: true });
 
   return (
-    <li>
-      <Link to={to} className="flex items-center gap-1">
+    <li className="hover-coral-white">
+      <Link to={to} className="flex items-center gap-1 ">
         <div
           className={`h-14 w-2 ${isPageActive ? "bg-coral" : "bg-inherit"} `}
         ></div>
@@ -54,14 +54,14 @@ const SidePanel = () => {
 
   return (
     <div
-      className={` flex h-full absolute left-0 top-0 bottom-0 bg-skyBlue shadow-lg transition-all duration-500 z-10 ${
+      className={` hidden md:flex h-full absolute left-0 top-0 bottom-0 bg-sky-900 text-brightYellow shadow-lg transition-all duration-500 z-10 ${
         isExpand ? "w-36" : "w-14"
       }`}
       onMouseEnter={() => setIsExpand(true)}
       onMouseLeave={() => setIsExpand(false)}
     >
-      <nav className="h-full">
-        <ul>
+      <nav className="h-full w-full">
+        <ul className=" flex flex-col items-stretch">
           <BurgerButton handleIsExpand={handleIsExpand} />
           <ListNav
             icons={<FaHome size={24} />}

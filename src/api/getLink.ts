@@ -8,7 +8,7 @@ export const useAPIInstance = () => {
       axios.create({
         baseURL: baseURL,
       }),
-    []
+    [baseURL]
   );
 
   return eduCartAPI;

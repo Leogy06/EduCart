@@ -10,5 +10,16 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".hover-coral-white:hover": {
+          backgroundColor: "#FF7F50",
+          color: "#ffffff",
+        },
+      };
+
+      addUtilities(newUtilities);
+    },
+  ],
 };
