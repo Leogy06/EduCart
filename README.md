@@ -1,1 +1,1 @@
-An e-commerce MERN App for school supplies
+A online garage sale using MERN
