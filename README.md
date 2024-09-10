@@ -1,1 +1,1 @@
-A online garage sale using MERN
+An online garage sale using MERN
